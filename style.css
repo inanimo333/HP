@@ -1,0 +1,118 @@
+/* =====================================================================
+INanim0、、 THEME CSS（注釈付き）
+- ロゴの雰囲気（グリッチ/冷たい青紫/灰紫）をデザイン・トークン化
+- tele型の構成に対して、色/余白/効果のみで世界観を付与
+===================================================================== */
+
+/* 1) Design Tokens（色・半径・影の共通化）
+   :root にCSS変数として定義 → 後から一括調整が容易。 */
+:root{
+  /* 背景（黒に僅かな紫を混ぜた暗灰） */
+  --bg-0:#111013;  /* キャンバス */
+  --bg-1:#17171c;  /* セクション/カードの面 */
+  /* テキスト */
+  --fg-0:#e0dee9;  /* メイン文字（冷たい白） */
+  --fg-1:#a19caf;  /* サブ文字（紫灰） */
+  /* 罫線（hairline） */
+  --line:#24232b;
+  /* アクセント（ロゴの花弁トーンに準拠） */
+  --acc-1:#b28fff; /* 光る青紫 */
+  --acc-2:#8aa0ff; /* 2nd（hover等で使用） */
+  /* 効果 */
+  --radius:12px;
+  --shadow:0 1px 0 rgba(255,255,255,.02) inset, 0 12px 36px rgba(0,0,0,.35);
+  --glow:0 0 18px rgba(178,143,255,.25);
+}
+
+*{box-sizing:border-box}
+html,body{
+  margin:0;padding:0;background:var(--bg-0);color:var(--fg-0);
+  font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,'Noto Sans JP','Hiragino Kaku Gothic ProN',Meiryo,sans-serif;
+  line-height:1.75;
+}
+a{color:var(--fg-0);text-decoration:none}
+a:hover{opacity:.92}
+
+/* 2) Layout 基本幅 */
+main{max-width:1100px;margin:0 auto;padding:0 20px 120px}
+
+/* 3) Header（固定・半透明）
+   背景をグラデ＋blurで“暗室の光”風に。 */
+.head{
+  position:sticky;top:0;z-index:10;
+  background:linear-gradient(180deg,rgba(17,16,19,.92),rgba(17,16,19,.78));
+  backdrop-filter:saturate(1.2) blur(6px);
+  border-bottom:1px solid var(--line);
+  padding:14px 20px;display:flex;align-items:center;justify-content:space-between;
+}
+.brand{display:flex;gap:10px;align-items:center;font-weight:700;letter-spacing:.06em}
+.brand img{height:22px;width:22px;filter:drop-shadow(var(--glow))}
+.nav{display:flex;gap:18px;flex-wrap:wrap}
+.nav a.active{color:var(--acc-1)}
+
+/* 4) セクション/タイポ */
+section{padding:72px 0;border-bottom:1px solid var(--line)}
+h1{font-size:clamp(28px,5vw,44px);line-height:1.15;margin:0 0 12px}
+h2{font-size:clamp(22px,3vw,28px);margin:0 0 18px}
+h3{font-size:20px;margin:0 0 6px}
+.sub{color:var(--fg-1)}
+
+/* 5) HOME / NEWS */
+.hero-minimal{padding:40px 0 10px}
+.news-list{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
+.news-list li{border-bottom:1px dashed var(--line);padding:10px 0}
+.news-list time{color:var(--fg-1);margin-right:10px}
+.more a{color:var(--acc-1)}
+.more a:hover{text-decoration:underline}
+
+/* 6) MUSIC グリッド（カードに微グリッチ演出） */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:620px){.grid{grid-template-columns:1fr}}
+
+.tile{position:relative;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:rgba(255,255,255,.02);box-shadow:var(--shadow)}
+/* 擬似要素で縦の光筋。ロゴの質感をテクスチャに落とす。 */
+.tile::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    linear-gradient(180deg,rgba(178,143,255,.04),transparent 60%,rgba(138,160,255,.04)),
+    repeating-linear-gradient(90deg, rgba(255,255,255,.03) 0 1px, transparent 1px 3px);
+}
+.tile img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;filter:saturate(.9) contrast(1.02)}
+.tile figcaption{padding:12px;color:var(--fg-1)}
+.tile:hover{box-shadow:0 0 0 1px rgba(178,143,255,.35), 0 10px 40px rgba(178,143,255,.12);}
+
+/* 7) LIVE（左=日付/右=会場） */
+.live-list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.live-list li{display:flex;gap:12px;border-bottom:1px dashed var(--line);padding:12px 0}
+.live-list .date{width:160px;color:var(--fg-1)}
+
+/* 8) VIDEO：黒面 + 罫線 + 角丸 */
+.ratio{position:relative;padding-bottom:56.25%;height:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.ratio iframe{position:absolute;inset:0;width:100%;height:100%}
+
+/* 9) CONTACT */
+.plain{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.foot{padding:48px 20px;color:var(--fg-1);text-align:center;border-top:1px solid var(--line)}
+
+/* 10) MUSIC モーダル */
+.modal{position:fixed;inset:0;display:none}
+.modal[aria-hidden="false"]{display:block}
+.modal-bg{position:absolute;inset:0;background:rgba(0,0,0,.6);backdrop-filter:blur(2px)}
+.modal-card{position:relative;max-width:780px;margin:8vh auto;background:linear-gradient(180deg,#14141a,#101016);
+  border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 20px 70px rgba(0,0,0,.5)}
+.modal-close{position:absolute;top:10px;right:12px;border:1px solid var(--line);background:transparent;color:var(--fg-0);
+  border-radius:999px;padding:4px 12px;font-size:18px}
+.modal-content{padding:18px}
+.modal-header{display:flex;gap:18px}
+.modal-cover{width:190px;height:190px;object-fit:cover;border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow)}
+.modal-body{flex:1}
+.modal-body h3{margin:0 0 6px}
+.modal-body p{margin:0 0 10px}
+
+/* 11) 背景ノイズ（超薄。不要なら削除） */
+body::before{
+  content:"";position:fixed;inset:-10%;
+  background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.02"/></svg>');
+  background-size:300px 300px;pointer-events:none;z-index:-1;
+}
