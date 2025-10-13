@@ -146,20 +146,7 @@ h3{font-size:20px;margin:0 0 6px}
   padding-top: 80px; /* ヘッダー分の余白 */
   z-index: 1000;
 }
-.modal [data-close] {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 1.6rem;
-  cursor: pointer;
-  background: rgba(255,255,255,0.1);
-  border-radius: 50%;
-  padding: 4px 8px;
-  transition: 0.2s ease;
-}
-.modal [data-close]:hover {
-  background: rgba(255,255,255,0.25);
-}
+
 
 
 
