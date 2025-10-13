@@ -183,3 +183,8 @@ body::before{
     border-bottom: 1px solid var(--border);
   }
 }
+
+/* モーダルのリンクを縦並びに */
+.links { display: flex; flex-direction: column; gap: 6px; }
+.links a { display: block; }
+
