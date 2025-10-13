@@ -25,14 +25,32 @@ app.js（注釈付き）
   }
 
   // クリック → ハッシュ書き換え
-  links.forEach(a => a.addEventListener('click', (e) => {
+  /* links.forEach(a => a.addEventListener('click', (e) => {
     const href = a.getAttribute('href');
     if(href && href.startsWith('#')){
       e.preventDefault();
       history.pushState(null, '', href);
       setActive(href);
     }
-  }));
+  })); */
+
+  links.forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const href = a.getAttribute('href');
+    history.pushState(null, '', href);
+    setActive(href);
+
+    // 📱 スマホメニューを閉じる処理
+    const nav = document.querySelector('.nav');
+    const menuBtn = document.getElementById('menu-toggle');
+    if (nav.classList.contains('open')) {
+      nav.classList.remove('open');
+      menuBtn.classList.remove('active');
+    }
+  });
+});
+
 
   window.addEventListener('hashchange', () => setActive(location.hash));
   window.addEventListener('DOMContentLoaded', () => setActive(location.hash || '#home'));
