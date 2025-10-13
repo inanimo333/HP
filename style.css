@@ -51,25 +51,24 @@ main{max-width:1100px;margin:0 auto;padding:0 20px 120px}
   justify-content: space-between;
 }
 
+/* ===== ロゴの余白を消す ===== */
 .brand {
   display: flex;
-  gap: 10px;
   align-items: center;
-  font-weight: 700;
-  letter-spacing: .06em;
-  padding: 0;                /* ← 追加：上下余白リセット */
-  margin: 0;                 /* ← 追加：外側の余白リセット */
+  justify-content: center; /* 中央寄せ */
+  margin: 0;
+  padding: 0;
+  line-height: 1; /* 行間余白を消す */
 }
 
-.brand img {
-  display: block;            /* ← 追加：インライン余白を消す */
-  width: 120px;              /* ← サイズ調整は任意 */
-  height: auto;
-  margin: 0;                 /* ← 追加 */
-  padding: 0;                /* ← 追加 */
-  vertical-align: middle;    /* ← 念のため中央基準 */
-  filter: drop-shadow(var(--glow));
+.brand .logo {
+  display: block;    /* 下の余白を完全に消す */
+  width: auto;
+  height: 60px;      /* ← 実際の見た目に合わせて調整（40〜80pxくらい） */
+  margin: 0;
+  padding: 0;
 }
+
 
 .nav{display:flex;gap:18px;flex-wrap:wrap}
 .nav a.active{color:var(--acc-1)}
