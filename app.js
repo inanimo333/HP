@@ -85,8 +85,15 @@ const musicData = {
      </div>
    `;
     modal.setAttribute('aria-hidden', 'false');
+    modal.setAttribute('aria-hidden','false');
+    document.documentElement.classList.add('modal-open');
+    document.body.classList.add('modal-open');
   }
-  function close(){ modal.setAttribute('aria-hidden', 'true'); }
+  function close(){ 
+    modal.setAttribute('aria-hidden', 'true'); 
+    document.documentElement.classList.remove('modal-open');
+    document.body.classList.remove('modal-open');
+  }
 
   document.querySelectorAll('.tile').forEach(t => {
     t.addEventListener('click', () => open(t.dataset.key));
