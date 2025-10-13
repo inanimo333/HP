@@ -127,3 +127,31 @@ body::before{
   background-repeat: no-repeat;
   display: block;
 }
+
+/* ====== ハンバーガーメニュー ====== */
+.menu-btn {
+  display: none;
+  font-size: 28px;
+  background: none;
+  color: var(--fg);
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* モバイル用レイアウト */
+@media (max-width: 780px) {
+  .menu-btn { display: block; }
+  .nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: var(--card);
+    border-top: 1px solid var(--border);
+  }
+  .nav.open { display: flex; }
+  .nav a {
+    padding: 14px 24px;
+    border-bottom: 1px solid var(--border);
+  }
+}
