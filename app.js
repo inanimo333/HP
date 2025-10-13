@@ -54,7 +54,7 @@ const musicData = {
   },
   numbness: {
     title: "NUMBNESS",
-    cover: "assets/NUMBNESS.jpg",
+    cover: "assets/numbness.jpg",
     desc:  "何も感じずにいられることが、大人になるということでしょうか。<br>2025.9.10 Release",
     links: [
       {label:"SpecialSite", url:"NUMBNESS/"},
