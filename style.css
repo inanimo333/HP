@@ -133,27 +133,6 @@ h3{font-size:20px;margin:0 0 6px}
 .modal-body h3{margin:0 0 6px}
 .modal-body p{margin:0 0 10px}
 
-.modal-body {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  justify-content: center;
-}
-
-/* ジャケ写 */
-.modal-cover {
-  width: 45%;
-  max-width: 320px;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-/* テキスト部分 */
-.modal-text {
-  flex: 1;
-  text-align: left;
-}
-
 /* スマホだけ縦並びに変更 */
 @media (max-width: 768px) {
   .modal-body {
