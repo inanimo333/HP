@@ -106,22 +106,9 @@ const musicData = {
     if(e.target.hasAttribute('data-close') || e.target.classList.contains('modal-bg')) close();
   });
 
-
   window.addEventListener('keydown', (e) => { if(e.key==='Escape') close(); });
 })();
 
 
-//３線メニュー
-<script>
-document.addEventListener("click", (e) => {
-  const btn = document.getElementById("menu-toggle");
-  const nav = document.getElementById("nav-links");
-  if (!btn || !nav) return;
-  if (e.target === btn) {
-    nav.classList.toggle("open");
-  } else if (!nav.contains(e.target)) {
-    nav.classList.remove("open");
-  }
-});
-</script>
+
 
