@@ -162,7 +162,7 @@ h3{font-size:20px;margin:0 0 6px}
   box-shadow: 0 20px 70px rgba(0,0,0,.5);
 }
 
-/* × ボタンを押しやすく */
+/* × ボタンを押しやすく 
 .modal-close {
   position: absolute;
   top: 12px; right: 12px;
