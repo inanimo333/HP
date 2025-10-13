@@ -132,48 +132,49 @@ h3{font-size:20px;margin:0 0 6px}
 .modal-body{flex:1}
 .modal-body h3{margin:0 0 6px}
 .modal-body p{margin:0 0 10px}
-}
+} */
 
-/* === Modal: 安定レイアウト === */
 .modal {
   position: fixed;
   inset: 0;
   z-index: 1000;
-  display: none;                  /* 既定は非表示 */
+  display: flex;
   justify-content: center;
-  align-items: flex-start;        /* 画面の上寄せ */
-  padding-top: calc(var(--header-h, 72px) + 12px); /* ヘッダー分の安全距離 */
-  background: rgba(10,10,15,.8);
+  align-items: flex-start;
+  background: rgba(10,10,15,0.8);
   backdrop-filter: blur(8px);
+  overflow-y: auto; /* ←これ！モーダル全体をスクロール可に */
+  -webkit-overflow-scrolling: touch;
+  padding: 40px 0 40px; /* 上下余白（ヘッダー分+見やすさ） */
 }
-.modal[aria-hidden="false"] { display: flex; }
-
-/* 背景が前面に来ないようにする場合は pointer-events:all は付けない */
-.modal-bg { position: fixed; inset: 0; }
 
 .modal-card {
-  position: relative;
-  width: min(92vw, 780px);        /* ← 幅を“必ず”確保 */
-  min-height: 120px;              /* ← 高さ0防止（中身が無くても潰れない） */
+  width: min(92vw, 780px);
   background: linear-gradient(180deg, #14141a, #101015);
-  border: 1px solid rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 20px 70px rgba(0,0,0,.5);
+  box-shadow: 0 20px 70px rgba(0,0,0,0.5);
+  margin: auto; /* 中央寄せ */
 }
 
-/* × ボタンを押しやすく 
+/* 閉じるボタン */
 .modal-close {
   position: absolute;
   top: 12px; right: 12px;
   width: 36px; height: 36px;
-  font-size: 18px; line-height: 36px;
-  text-align: center;
-  border: 1px solid rgba(255,255,255,.12);
+  font-size: 18px;
   border-radius: 50%;
-  background: rgba(255,255,255,.06);
+  text-align: center;
+  line-height: 36px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
   cursor: pointer;
-} */
+}
+
+/* 背景が前面に来ないようにする場合は pointer-events:all は付けない */
+.modal-bg { position: fixed; inset: 0; }
+
 
 .modal-close{position:absolute;top:10px;right:12px;border:1px solid var(--line);background:transparent;color:var(--fg-0);
   border-radius:999px;padding:4px 12px;font-size:18px}
