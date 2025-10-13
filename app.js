@@ -43,15 +43,13 @@ app.js（注釈付き）
    - cover は /assets/*.jpg を想定 */
 const musicData = {
   neanion: {
-    title: "ネアニオン（2025）",
-    cover: "assets/neanion.jpg",
-    desc:  "壊れ × 幻想。静かに侵食する中毒性。",
+    title: "ネアニオン",
+    cover: "assets/neanion.JPG",
+    desc:  "2025.9.10 Release<br>何も感じずにいられることが、大人になるということでしょうか。",
     links: [
-      {label:"特設", url:"neanion/"},
-      {label:"Smart Link", url:"#"},
-      {label:"Spotify", url:"#"},
-      {label:"Apple Music", url:"#"},
-      {label:"YouTube Music", url:"#"},
+      {label:"SpecialSite", url:"neanion/"},
+      {label:"DL&Streaming", url:"https://linkco.re/eqRu0BZX"},
+      // {label:"MusicVideo", url:"#"}, 
     ]
   },
   numbness: {
