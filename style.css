@@ -119,8 +119,8 @@ body::before{
 
 /* HOME上部の画像埋め込み */
 .hero {
-  width: 100%;
-  height: 100vh; /* 画面の高さ分 */
+  width: 100vh; /* 画面の高さ分 */
+  height: 100%; 
   background-image: url('assets/logo_src.png');
   background-size: cover; /* 画面いっぱいに拡大 */
   background-position: center;
