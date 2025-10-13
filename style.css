@@ -119,8 +119,8 @@ h3{font-size:20px;margin:0 0 6px}
 .foot{padding:48px 20px;color:var(--fg-1);text-align:center;border-top:1px solid var(--line)}
 
 /* 10) MUSIC モーダル */
-.modal{position:fixed;inset:0;display:none}
-.modal[aria-hidden="false"]{display:block}
+/* .modal{position:fixed;inset:0;display:none}
+.modal[aria-hidden="false"]{display:block}  */
 .modal-bg{position:absolute;inset:0;background:rgba(0,0,0,.6);backdrop-filter:blur(2px)}
 .modal-card{position:relative;max-width:780px;margin:8vh auto;background:linear-gradient(180deg,#14141a,#101016);
   border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 20px 70px rgba(0,0,0,.5)}
