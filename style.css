@@ -119,8 +119,8 @@ h3{font-size:20px;margin:0 0 6px}
 .foot{padding:48px 20px;color:var(--fg-1);text-align:center;border-top:1px solid var(--line)}
 
 /* 10) MUSIC モーダル */
-/* .modal{position:fixed;inset:0;display:none}
-.modal[aria-hidden="false"]{display:block}  */
+/* .modal{position:fixed;inset:0;display:none} 
+.modal[aria-hidden="false"]{display:block}  
 .modal-bg{position:absolute;inset:0;background:rgba(0,0,0,.6);backdrop-filter:blur(2px)}
 .modal-card{position:relative;max-width:780px;margin:8vh auto;background:linear-gradient(180deg,#14141a,#101016);
   border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 20px 70px rgba(0,0,0,.5)}
@@ -143,10 +143,76 @@ h3{font-size:20px;margin:0 0 6px}
   backdrop-filter: blur(8px);
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* ← ここが重要 */
-  padding-top: 80px; /* ヘッダー分の余白 */
+  align-items: flex-start; /* ← ここが重要 *//*
+  padding-top: 80px; /* ヘッダー分の余白 *//*
   z-index: 1000;
 }
+
+/* === Modal: 安定レイアウト === */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;                  /* 既定は非表示 */
+  justify-content: center;
+  align-items: flex-start;        /* 画面の上寄せ */
+  padding-top: calc(var(--header-h, 72px) + 12px); /* ヘッダー分の安全距離 */
+  background: rgba(10,10,15,.8);
+  backdrop-filter: blur(8px);
+}
+.modal[aria-hidden="false"] { display: flex; }
+
+/* 背景が前面に来ないようにする場合は pointer-events:all は付けない */
+.modal-bg { position: fixed; inset: 0; }
+
+.modal-card {
+  position: relative;
+  width: min(92vw, 780px);        /* ← 幅を“必ず”確保 */
+  min-height: 120px;              /* ← 高さ0防止（中身が無くても潰れない） */
+  background: linear-gradient(180deg, #14141a, #101015);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 70px rgba(0,0,0,.5);
+}
+
+/* × ボタンを押しやすく */
+.modal-close {
+  position: absolute;
+  top: 12px; right: 12px;
+  width: 36px; height: 36px;
+  font-size: 18px; line-height: 36px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 50%;
+  background: rgba(255,255,255,.06);
+  cursor: pointer;
+}
+
+/* 中身 */
+.modal-content { padding: 18px; }
+
+.modal-body {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.modal-cover {
+  width: 45%;
+  max-width: 320px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid rgba(255,255,255,.1);
+}
+.modal-text { flex: 1; text-align: left; }
+
+/* スマホは縦並び */
+@media (max-width: 768px) {
+  .modal-body { flex-direction: column; text-align: center; }
+  .modal-cover { width: 90%; margin-bottom: 10px; }
+  .modal-text { text-align: center; }
+}
+
 
 
 
