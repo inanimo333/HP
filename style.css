@@ -356,8 +356,4 @@ body::before{
   .contact-pill{ padding: 14px 18px; }
 }
 
-.contact-pill.x{ background: #1d9bf0; }
-.contact-pill.instagram{ background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4); }
-.contact-pill.youtube{ background: #ff0000; }
-.contact-pill.spotify{ background: #1db954; color:#000; }
 
