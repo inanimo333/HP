@@ -138,14 +138,15 @@ h3{font-size:20px;margin:0 0 6px}
   position: fixed;
   inset: 0;
   z-index: 1000;
-  display: flex;
   justify-content: center;
   align-items: flex-start;
   background: rgba(10,10,15,0.8);
   backdrop-filter: blur(8px);
   -webkit-overflow-scrolling: touch;
   padding: 40px 0 40px; /* 上下余白（ヘッダー分+見やすさ） */
+  display: none;
 }
+.model[aria-hidden="false"]{displey: flex;}
 
 .modal-card {
   width: min(92vw, 780px);
