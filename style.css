@@ -136,18 +136,32 @@ h3{font-size:20px;margin:0 0 6px}
 /* スマホだけ縦並びに変更 */
 @media (max-width: 768px) {
   .modal-body {
-    flex-direction: column;
-    text-align: center;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
-  .modal-cover {
-    width: 90%;
-    margin-bottom: 10px;
-  }
+.modal-cover {
+  width: 90%;
+  max-width: 320px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
 
-  .modal-text {
-    text-align: center;
-  }
+.modal-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 4px 0 6px;
+}
+
+.modal-desc {
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
 }
 
 
