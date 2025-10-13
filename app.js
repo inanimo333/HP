@@ -45,7 +45,7 @@ const musicData = {
   neanion: {
     title: "ネアニオン",
     cover: "assets/neanion.JPG",
-    desc:  "2025.10.17 Release<br>僕らネアニオン、葦にしがみついている。",
+    desc:  "僕らネアニオン、葦にしがみついている。<br>2025.10.17 Release",
     links: [
       {label:"SpecialSite", url:"neanion/"},
       {label:"DL&Streaming", url:"https://linkco.re/fMsg46gH"},
@@ -55,7 +55,7 @@ const musicData = {
   numbness: {
     title: "ナムネス（2025）",
     cover: "assets/NUMBNESS.jpg",
-    desc:  "2025.9.10 Release<br>何も感じずにいられることが、大人になるということでしょうか。",
+    desc:  "何も感じずにいられることが、大人になるということでしょうか。<br>2025.9.10 Release",
     links: [
       {label:"SpecialSite", url:"NUMBNESS/"},
       {label:"DL&Streaming", url:"https://linkco.re/eqRu0BZX"},
