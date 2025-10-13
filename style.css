@@ -233,7 +233,7 @@ h3{font-size:20px;margin:0 0 6px}
 /* スマホは縦並び */
 @media (max-width: 768px) {
   .modal-body { flex-direction: column; text-align: center; }
-  .modal-cover { width: 90%; margin-bottom: 10px; }
+  /*.modal-cover { width: 90%; margin-bottom: 10px; }*/
   .modal-text { text-align: center; }
 }
 
