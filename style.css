@@ -126,6 +126,13 @@ h3{font-size:20px;margin:0 0 6px}
   gap: 32px;
 }
 
+.video-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
 .video-thumb {
   width: 300px;
   border-radius: 12px;
@@ -140,9 +147,24 @@ h3{font-size:20px;margin:0 0 6px}
   box-shadow: 0 0 30px rgba(180,100,255,0.3);
 }
 
+.video-title {
+  margin-top: 10px;
+  font-size: 16px;
+  color: rgba(220,200,255,0.85);
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+}
+
+.video-item:hover .video-title {
+  color: rgba(210,150,255,1);
+}
+
 @media (max-width: 768px) {
   .video-thumb {
     width: 90%;
+  }
+   .video-title {
+    font-size: 14px;
   }
 }
 
@@ -152,21 +174,6 @@ h3{font-size:20px;margin:0 0 6px}
 .foot{padding:48px 20px;color:var(--fg-1);text-align:center;border-top:1px solid var(--line)}
 
 /* 10) MUSIC モーダル */
-/* .modal{position:fixed;inset:0;display:none}
-.modal[aria-hidden="false"]{display:block}
-.modal-bg{position:absolute;inset:0;background:rgba(0,0,0,.6);backdrop-filter:blur(2px)}
-.modal-card{position:relative;max-width:780px;margin:8vh auto;background:linear-gradient(180deg,#14141a,#101016);
-  border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 20px 70px rgba(0,0,0,.5)}
-.modal-close{position:absolute;top:10px;right:12px;border:1px solid var(--line);background:transparent;color:var(--fg-0);
-  border-radius:999px;padding:4px 12px;font-size:18px}
-.modal-content{padding:18px}
-.modal-header{display:flex;gap:18px}
-.modal-cover{width:190px;height:190px;object-fit:cover;border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow)}
-.modal-body{flex:1}
-.modal-body h3{margin:0 0 6px}
-.modal-body p{margin:0 0 10px}
-} */
-
 .modal {
   position: fixed;
   inset: 0;
@@ -180,7 +187,6 @@ h3{font-size:20px;margin:0 0 6px}
   display: none;
 }
 .modal[aria-hidden="false"] { display: flex; }
-
 
 .modal-card {
   width: min(92vw, 780px);
