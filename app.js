@@ -45,31 +45,23 @@ const musicData = {
   neanion: {
     title: "ネアニオン",
     cover: "assets/neanion.JPG",
-    desc:  "2025.9.10 Release<br>何も感じずにいられることが、大人になるということでしょうか。",
+    desc:  "2025.10.17 Release<br>僕らネアニオン、葦にしがみついている。",
     links: [
       {label:"SpecialSite", url:"neanion/"},
-      {label:"DL&Streaming", url:"https://linkco.re/eqRu0BZX"},
-      // {label:"MusicVideo", url:"#"}, 
+      {label:"DL&Streaming", url:"https://linkco.re/fMsg46gH"},
+      {label:"MusicVideo", url:"https://youtu.be/-AcBYQc19eE?si=cIgl4UnQXiVQbQO1"}, 
     ]
   },
   numbness: {
     title: "ナムネス（2025）",
-    cover: "assets/numbness.jpg",
-    desc:  "感情の麻痺を静かに見つめる、曖昧の縁。",
+    cover: "assets/NUMBNESS.jpg",
+    desc:  "2025.9.10 Release<br>何も感じずにいられることが、大人になるということでしょうか。",
     links: [
-      {label:"Smart Link", url:"#"},
-      {label:"Spotify", url:"#"},
-      {label:"Apple Music", url:"#"},
+      {label:"SpecialSite", url:"NUMBNESS/"},
+      {label:"DL&Streaming", url:"https://linkco.re/eqRu0BZX"},
+      //{label:"MusicVideo", url:"https://youtu.be/-AcBYQc19eE?si=cIgl4UnQXiVQbQO1"},  
     ]
   },
-  seiryo: {
-    title: "寂寥戦歌（2025）",
-    cover: "assets/seiryo.jpg",
-    desc:  "孤独と反抗が擦れて生まれる火花。",
-    links: [
-      {label:"Smart Link", url:"#"},
-    ]
-  }
 };
 
 /* 3) MUSIC モーダル
