@@ -75,16 +75,15 @@ const musicData = {
     const item = musicData[key];
     if(!item) return;
     content.innerHTML = `
-      <div class="modal-header">
-        <img class="modal-cover" src="${item.cover}" alt="${item.title}">
-        <div class="modal-body">
-          <h3>${item.title}</h3>
-          <p>${item.desc}</p>
-          <p class="links">
-            ${item.links.map(l => `<a class="pill" href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`).join('')}
-          </p>
-        </div>
-      </div>`;
+     <div class="modal-body">
+       <img class="modal-cover" src="${item.cover}" alt="${item.title}">
+       <h3 class="modal-title">${item.title}</h3>
+       <p class="modal-desc">${item.desc}</p>
+       <div class="links">
+         ${item.links.map(l => `<a href="${l.url}" target="_blank">${l.label}</a>`).join('')}
+       </div>
+     </div>
+   `;
     modal.setAttribute('aria-hidden', 'false');
   }
   function close(){ modal.setAttribute('aria-hidden', 'true'); }
