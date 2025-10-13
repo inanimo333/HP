@@ -132,6 +132,33 @@ h3{font-size:20px;margin:0 0 6px}
 .modal-body{flex:1}
 .modal-body h3{margin:0 0 6px}
 .modal-body p{margin:0 0 10px}
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.modal-cover {
+  width: 90%;
+  max-width: 320px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.modal-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 4px 0 6px;
+}
+
+.modal-desc {
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
 
 /* 11) 背景ノイズ（超薄。不要なら削除） */
 body::before{
