@@ -132,6 +132,34 @@ h3{font-size:20px;margin:0 0 6px}
 .modal-body{flex:1}
 .modal-body h3{margin:0 0 6px}
 .modal-body p{margin:0 0 10px}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 15, 0.8);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* ← ここが重要 */
+  padding-top: 80px; /* ヘッダー分の余白 */
+  z-index: 1000;
+}
+.modal [data-close] {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  padding: 4px 8px;
+  transition: 0.2s ease;
+}
+.modal [data-close]:hover {
+  background: rgba(255,255,255,0.25);
+}
 
 
 
