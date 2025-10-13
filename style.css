@@ -121,7 +121,7 @@ body::before{
 .hero {
   width: 100%;
   height: 100vh; /* 画面の高さ分 */
-  background-image: url('logo-name.png');
+  background-image: url('assets/logo-name.png');
   background-size: cover; /* 画面いっぱいに拡大 */
   background-position: center;
   background-repeat: no-repeat;
