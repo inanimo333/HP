@@ -38,15 +38,39 @@ main{max-width:1100px;margin:0 auto;padding:0 20px 120px}
 
 /* 3) Header（固定・半透明）
    背景をグラデ＋blurで“暗室の光”風に。 */
-.head{
-  position:sticky;top:0;z-index:10;
-  background:linear-gradient(180deg,rgba(17,16,19,.92),rgba(17,16,19,.78));
-  backdrop-filter:saturate(1.2) blur(6px);
-  border-bottom:1px solid var(--line);
-  padding:14px 20px;display:flex;align-items:center;justify-content:space-between;
+.head {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(180deg, rgba(17,16,19,.92), rgba(17,16,19,.78));
+  backdrop-filter: saturate(1.2) blur(6px);
+  border-bottom: 1px solid var(--line);
+  padding: 8px 14px; /* ← 元が14px 20pxっぽいけど、余白を減らすならこのへんを小さく */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.brand{display:flex;gap:10px;align-items:center;font-weight:700;letter-spacing:.06em}
-.brand img{height:22px;width:22px;filter:drop-shadow(var(--glow))}
+
+.brand {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-weight: 700;
+  letter-spacing: .06em;
+  padding: 0;                /* ← 追加：上下余白リセット */
+  margin: 0;                 /* ← 追加：外側の余白リセット */
+}
+
+.brand img {
+  display: block;            /* ← 追加：インライン余白を消す */
+  width: 120px;              /* ← サイズ調整は任意 */
+  height: auto;
+  margin: 0;                 /* ← 追加 */
+  padding: 0;                /* ← 追加 */
+  vertical-align: middle;    /* ← 念のため中央基準 */
+  filter: drop-shadow(var(--glow));
+}
+
 .nav{display:flex;gap:18px;flex-wrap:wrap}
 .nav a.active{color:var(--acc-1)}
 
