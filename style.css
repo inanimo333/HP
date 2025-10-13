@@ -132,31 +132,43 @@ h3{font-size:20px;margin:0 0 6px}
 .modal-body{flex:1}
 .modal-body h3{margin:0 0 6px}
 .modal-body p{margin:0 0 10px}
+
 .modal-body {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
+  gap: 24px;
+  justify-content: center;
 }
 
+/* ジャケ写 */
 .modal-cover {
-  width: 90%;
+  width: 45%;
   max-width: 320px;
   border-radius: 8px;
-  margin-bottom: 12px;
+  object-fit: cover;
 }
 
-.modal-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin: 4px 0 6px;
+/* テキスト部分 */
+.modal-text {
+  flex: 1;
+  text-align: left;
 }
 
-.modal-desc {
-  font-size: 0.9rem;
-  color: #ccc;
-  line-height: 1.4;
-  margin-bottom: 10px;
+/* スマホだけ縦並びに変更 */
+@media (max-width: 768px) {
+  .modal-body {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .modal-cover {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .modal-text {
+    text-align: center;
+  }
 }
 
 
