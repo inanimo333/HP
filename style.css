@@ -145,6 +145,7 @@ h3{font-size:20px;margin:0 0 6px}
   border: 1px solid rgba(255,255,255,0.08);
   transition: all 0.3s ease;
   filter: grayscale(20%) contrast(110%) brightness(0.9);
+  margin: 0 auto 10px;
 }
 
 .video-thumb:hover {
@@ -160,6 +161,7 @@ h3{font-size:20px;margin:0 0 6px}
   color: rgba(220,200,255,0.85);
   letter-spacing: 0.05em;
   transition: color 0.3s ease;
+  margin: 0;
 }
 
 .video-item:hover .video-title {
