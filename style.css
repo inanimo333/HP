@@ -146,7 +146,8 @@ h3{font-size:20px;margin:0 0 6px}
   padding: 40px 0 40px; /* 上下余白（ヘッダー分+見やすさ） */
   display: none;
 }
-.modal[aria-hidden="false"]{displey: flex;}
+.modal[aria-hidden="false"] { display: flex; }
+
 
 .modal-card {
   width: min(92vw, 780px);
