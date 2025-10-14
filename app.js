@@ -102,6 +102,12 @@ const musicData = {
        </div>
      </div>
    `;
+    content.querySelectorAll('a').forEach(a => {
+       a.addEventListener('click', (e) => {
+          e.stopPropagation(); // ← モーダルの閉じイベントに届かせない
+       });
+    });
+
     modal.setAttribute('aria-hidden', 'false');
     modal.setAttribute('aria-hidden','false');
     document.documentElement.classList.add('modal-open');
@@ -117,11 +123,17 @@ const musicData = {
     t.addEventListener('click', () => open(t.dataset.key));
   });
   modal.addEventListener('click', (e) => {
-    if(e.target.hasAttribute('data-close') || e.target.classList.contains('modal-bg')) close();
+    //if(e.target.hasAttribute('data-close') || e.target.classList.contains('modal-bg')) close();
+     if (!e.target.closest('.modal-card')) close();
   });
 
   window.addEventListener('keydown', (e) => { if(e.key==='Escape') close(); });
 })();
+
+
+.modal { z-index: 1000; }
+.modal-bg { position: fixed; inset: 0; z-index: 1; }
+.modal-card { position: relative; z-index: 2; pointer-events: auto; }
 
 
 
