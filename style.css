@@ -108,18 +108,20 @@ h3{font-size:20px;margin:0 0 6px}
   font-size: 16px;
 }
 
-.about-quote {
+/* 引用3行：色・サイズ・“残響感” */
+.about-quote{
   color: var(--acc-2);
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  font-style: ltalic;
-  text-transform: none;
-  opacity: 0.9;
-  margin-top: 16px;
-  line-height: 1.8;
-  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-shadow: 0 0 6px rgba(150,100,255,.25); /* にじむ光 */
+  font-style: normal;       /* italicやめるならこのまま／使うなら削除 */
   text-align: center;
+  margin: 24px 0 10px;
+  line-height: 1.8;
+  font-size: clamp(18px, 2.3vw, 28px);
 }
+/* 行間のリズムを少し強調（任意） */
+.about-quote br{ content:""; display:block; margin-bottom:6px; }
 
 
 /* 6) MUSIC グリッド（カードに微グリッチ演出） */
