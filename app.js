@@ -102,12 +102,7 @@ const musicData = {
        </div>
      </div>
    `;
-    content.querySelectorAll('a').forEach(a => {
-       a.addEventListener('click', (e) => {
-          e.stopPropagation(); // ← モーダルの閉じイベントに届かせない
-       });
-    });
-
+    
     modal.setAttribute('aria-hidden', 'false');
     modal.setAttribute('aria-hidden','false');
     document.documentElement.classList.add('modal-open');
