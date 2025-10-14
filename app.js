@@ -124,16 +124,11 @@ const musicData = {
   });
   modal.addEventListener('click', (e) => {
     if(e.target.hasAttribute('data-close') || e.target.classList.contains('modal-bg')) close();
-   if (!e.target.closest('.modal-card')) close();
   });
 
   window.addEventListener('keydown', (e) => { if(e.key==='Escape') close(); });
 })();
 
-
-.modal { z-index: 1000; }
-.modal-bg { position: fixed; inset: 0; z-index: 1; }
-.modal-card { position: relative; z-index: 2; pointer-events: auto; }
 
 
 
