@@ -88,6 +88,14 @@ h3{font-size:20px;margin:0 0 6px}
 .more a{color:var(--acc-1)}
 .more a:hover{text-decoration:underline}
 
+/* NEWSとABOUTの間に区切り線 */
+.home-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.08); /* ほの暗い線 */
+  margin: 48px auto;
+  max-width: 720px; /* テキスト幅に合わせて中央寄せ */
+}
+
+
 .about-text {
   margin-top: 32px;
   line-height: 1.8;
