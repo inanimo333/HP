@@ -292,29 +292,7 @@ body::before{
   background-size:300px 300px;pointer-events:none;z-index:-1;
 }
 
-/* HOME上部の画像埋め込み */
-.hero {
-  width: 100%; /* 画面の高さ分 */
-  height: 80vh; 
-  background-size: cover; /* 画面いっぱいに拡大 */
-  background-position: center;
-  background-repeat: no-repeat;
-  display: block;
-}
 
-@supports (min-height: 100svh) {
-  .hero { min-height: 80svh; }
-}
-
-.hero--home{
-   background-image: url('assets/logo_src.png');
-}
-.hero--numbness{
-   background-image: url('assets/numbness.jpg');
-}
-.hero--neanion{
-   background-image: url('assets/neanion.JPG');
-}
 
 /* ====== ハンバーガーメニュー ====== */
 .menu-btn {
@@ -400,4 +378,28 @@ body::before{
   .contact-pill{ padding: 14px 18px; }
 }
 
+
+/* HOME上部の画像埋め込み */
+.hero {
+  width: 100%; /* 画面の高さ分 */
+  height: 80vh; 
+  background-size: cover; /* 画面いっぱいに拡大 */
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+}
+
+@supports (min-height: 100svh) {
+  .hero { min-height: 80svh; }
+}
+
+.hero--home{
+   background-image: url('assets/logo_src.png');
+}
+.hero--numbness{
+   background-image: url('assets/numbness.jpg');
+}
+.hero--neanion{
+   background-image: url('assets/neanion.JPG');
+}
 
