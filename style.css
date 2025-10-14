@@ -92,8 +92,6 @@ h3{font-size:20px;margin:0 0 6px}
   margin-top: 32px;
   line-height: 1.8;
   max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
   text-align: left;
   color: var(--fg-1);
 }
@@ -104,7 +102,6 @@ h3{font-size:20px;margin:0 0 6px}
 }
 
 .about-quote {
-  text-align: center;
   color: var(--acc-1);
   font-style: italic;
   margin-top: 32px;
