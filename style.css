@@ -91,7 +91,6 @@ h3{font-size:20px;margin:0 0 6px}
 .about-text {
   margin-top: 32px;
   line-height: 1.8;
-  max-width: 720px;
   text-align: left;
   color: var(--fg-1);
 }
@@ -106,6 +105,7 @@ h3{font-size:20px;margin:0 0 6px}
   font-style: italic;
   margin-top: 32px;
   line-height: 1.8;
+　font-size: 25px;
 }
 
 
