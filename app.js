@@ -85,7 +85,7 @@ const musicData = {
 /* 3) MUSIC モーダル
    - .tile（ジャケ）をクリック → musicData から情報を取得 → HTML差し込み
    - aria-hidden の切替で開閉を制御（キーボード操作/スクリーンリーダ配慮） */
-(function musicModal(){
+/*(function musicModal(){
   const modal = document.getElementById('musicModal');
   const content = modal.querySelector('.modal-content');
 
@@ -125,7 +125,60 @@ modal.addEventListener('click', (e) => {
 
 
   window.addEventListener('keydown', (e) => { if(e.key==='Escape') close(); });
+})(); */
+
+(function musicModal(){
+  const modal = document.getElementById('musicModal');
+  const content = modal.querySelector('.modal-content');
+
+  function open(key){
+    const item = musicData[key];
+    if(!item) return;
+    content.innerHTML = `
+     <div class="modal-body">
+       <img class="modal-cover" src="${item.cover}" alt="${item.title}">
+       <h3 class="modal-title">${item.title}</h3>
+       <p class="modal-desc">${item.desc}</p>
+       <div class="links">
+         ${item.links.map(l => `<a href="${l.url}" target="_blank" rel="noopener noreferrer">${l.label}</a>`).join('')}
+       </div>
+     </div>
+   `;
+
+    // 🔽 追加：モーダル内リンクは確実に開く（PC対策）
+    content.addEventListener('click', (e) => {
+      const a = e.target.closest('.links a, a.pill, .modal-body a');
+      if (!a) return;
+      e.preventDefault();      // 既存のルーター横取りを無効化
+      e.stopPropagation();     // 背景のクリックハンドラに渡さない
+      window.open(a.href, '_blank', 'noopener');
+    });
+
+    modal.setAttribute('aria-hidden','false');
+    document.documentElement.classList.add('modal-open');
+    document.body.classList.add('modal-open');
+  }
+
+  function close(){
+    modal.setAttribute('aria-hidden','true');
+    document.documentElement.classList.remove('modal-open');
+    document.body.classList.remove('modal-open');
+  }
+
+  document.querySelectorAll('.tile').forEach(t => {
+    t.addEventListener('click', () => open(t.dataset.key));
+  });
+
+  // 🔄 置き換え：背景クリックだけで閉じる（カード内は閉じない）
+  modal.addEventListener('click', (e) => {
+    const inCard = e.target.closest('.modal-content');
+    const isClose = e.target.hasAttribute('data-close');
+    if (!inCard || isClose) close();
+  });
+
+  window.addEventListener('keydown', (e) => { if(e.key === 'Escape') close(); });
 })();
+
 
 
 
