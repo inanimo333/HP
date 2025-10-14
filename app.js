@@ -118,9 +118,9 @@ const musicData = {
     t.addEventListener('click', () => open(t.dataset.key));
   }); 
 
-  /*modal.addEventListener('click', (e) => {
+  /modal.addEventListener('click', (e) => {
     if(e.target.hasAttribute('data-close') || e.target.classList.contains('modal-bg')) close();
-  }); */
+  }); 
 
    // モーダル内のリンククリックは、閉じる処理に届かせない
 content.addEventListener('click', (e) => {
