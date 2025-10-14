@@ -114,19 +114,9 @@ const musicData = {
     document.body.classList.remove('modal-open');
   }
 
-  /* document.querySelectorAll('.tile').forEach(t => {
+   document.querySelectorAll('.tile').forEach(t => {
     t.addEventListener('click', () => open(t.dataset.key));
-  }); */
-
- // 例：ルーター
-document.querySelectorAll('a[data-route]').forEach(a => {
-  a.addEventListener('click', (e) => {
-    e.preventDefault();                 // ← 内部遷移だけ止める
-    const href = a.getAttribute('href');
-    history.pushState(null, '', href);
-    setActive(href);
-  });
-});
+  }); 
 
   modal.addEventListener('click', (e) => {
     if(e.target.hasAttribute('data-close') || e.target.classList.contains('modal-bg')) close();
