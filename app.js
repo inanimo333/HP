@@ -123,8 +123,8 @@ const musicData = {
     t.addEventListener('click', () => open(t.dataset.key));
   });
   modal.addEventListener('click', (e) => {
-    //if(e.target.hasAttribute('data-close') || e.target.classList.contains('modal-bg')) close();
-     if (!e.target.closest('.modal-card')) close();
+    if(e.target.hasAttribute('data-close') || e.target.classList.contains('modal-bg')) close();
+   if (!e.target.closest('.modal-card')) close();
   });
 
   window.addEventListener('keydown', (e) => { if(e.key==='Escape') close(); });
