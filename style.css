@@ -109,8 +109,12 @@ h3{font-size:20px;margin:0 0 6px}
 }
 
 .about-quote {
-  color: var(--fg-0);
-  font-style: italic;
+  color: var(--acc-2);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  font-style: ltalic;
+  text-transform: none;
+  opacity: 0.9;
   margin-top: 16px;
   line-height: 1.8;
   font-size: 32px;
