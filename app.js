@@ -118,9 +118,10 @@ const musicData = {
     t.addEventListener('click', () => open(t.dataset.key));
   }); 
 
-  /modal.addEventListener('click', (e) => {
+
+modal.addEventListener('click', (e) => {
     if(e.target.hasAttribute('data-close') || e.target.classList.contains('modal-bg')) close();
-  }); 
+  });
 
 
   window.addEventListener('keydown', (e) => { if(e.key==='Escape') close(); });
