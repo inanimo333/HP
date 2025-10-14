@@ -21,7 +21,7 @@ app.js（注釈付き）
     window.scrollTo({top:0, behavior:'smooth'});
     // タイトルをセクションに合わせる（任意）
     const sec = document.getElementById(id);
-    if(sec && sec.dataset.title) document.title = `INanim0、、 — ${sec.dataset.title}`;
+    if(sec && sec.dataset.title) document.title = `INanimO — ${sec.dataset.title}`;
   }
 
   // クリック → ハッシュ書き換え
