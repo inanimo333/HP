@@ -109,15 +109,13 @@ h3{font-size:20px;margin:0 0 6px}
 }
 
 .about-quote {
-  color: var(--acc-1);
+  color: var(--fg-0);
   font-style: italic;
   margin-top: 16px;
   line-height: 1.8;
-}
-
-.about-quote p {
   font-size: 32px;
 }
+
 
 /* 6) MUSIC グリッド（カードに微グリッチ演出） */
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
