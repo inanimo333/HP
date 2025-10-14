@@ -88,6 +88,30 @@ h3{font-size:20px;margin:0 0 6px}
 .more a{color:var(--acc-1)}
 .more a:hover{text-decoration:underline}
 
+.about-text {
+  margin-top: 32px;
+  line-height: 1.8;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  color: var(--fg-1);
+}
+
+.about-text p {
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.about-quote {
+  text-align: center;
+  color: var(--acc-1);
+  font-style: italic;
+  margin-top: 32px;
+  line-height: 1.8;
+}
+
+
 /* 6) MUSIC グリッド（カードに微グリッチ演出） */
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 @media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
