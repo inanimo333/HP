@@ -275,6 +275,11 @@ h3{font-size:20px;margin:0 0 6px}
 .modal-body h3{margin:0 0 6px}
 .modal-body p{margin:0 0 10px}
 
+.modal { position: fixed; inset: 0; z-index: 1000; }
+.modal-content { position: relative; z-index: 2; pointer-events: auto; }
+.modal::before, .modal::after, .modal-bg { pointer-events: none; } /* 装飾レイヤーがクリックを奪わない */
+
+
 /* スマホは縦並び */
 @media (max-width: 768px) {
   .modal-body { flex-direction: column; text-align: center; }
