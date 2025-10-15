@@ -85,47 +85,7 @@ const musicData = {
 /* 3) MUSIC モーダル
    - .tile（ジャケ）をクリック → musicData から情報を取得 → HTML差し込み
    - aria-hidden の切替で開閉を制御（キーボード操作/スクリーンリーダ配慮） */
-/*(function musicModal(){
-  const modal = document.getElementById('musicModal');
-  const content = modal.querySelector('.modal-content');
 
-  function open(key){
-    const item = musicData[key];
-    if(!item) return;
-    content.innerHTML = `
-     <div class="modal-body">
-       <img class="modal-cover" src="${item.cover}" alt="${item.title}">
-       <h3 class="modal-title">${item.title}</h3>
-       <p class="modal-desc">${item.desc}</p>
-       <div class="links">
-         ${item.links.map(l => `<a href="${l.url}" target="_blank">${l.label}</a>`).join('')}
-       </div>
-     </div>
-   `;
-    
-    modal.setAttribute('aria-hidden', 'false');
-    modal.setAttribute('aria-hidden','false');
-    document.documentElement.classList.add('modal-open');
-    document.body.classList.add('modal-open');
-  }
-  function close(){ 
-    modal.setAttribute('aria-hidden', 'true'); 
-    document.documentElement.classList.remove('modal-open');
-    document.body.classList.remove('modal-open');
-  }
-
-   document.querySelectorAll('.tile').forEach(t => {
-    t.addEventListener('click', () => open(t.dataset.key));
-  }); 
-
-
-modal.addEventListener('click', (e) => {
-    if(e.target.hasAttribute('data-close') || e.target.classList.contains('modal-bg')) close();
-  });
-
-
-  window.addEventListener('keydown', (e) => { if(e.key==='Escape') close(); });
-})(); */
 
 (function musicModal(){
   const modal = document.getElementById('musicModal');
@@ -140,7 +100,7 @@ modal.addEventListener('click', (e) => {
        <h3 class="modal-title">${item.title}</h3>
        <p class="modal-desc">${item.desc}</p>
        <div class="links">
-         ${item.links.map(l => `<a href="${l.url}" target="_blank" rel="noopener noreferrer">${l.label}</a>`).join('')}
+        　${item.links.map(l => `<a href="${l.url}" rel="noopener noreferrer">${l.label}</a>`).join('')}
        </div>
      </div>
    `;
@@ -208,6 +168,14 @@ document.addEventListener('click', (e) => {
   history.pushState(null, '', a.getAttribute('href'));
   setActive(a.getAttribute('href'));
 });
+
+content.addEventListener('click', (e) => {
+  const a = e.target.closest('.links a');
+  if (!a) return;
+  // モーダルを閉じてから同じウィンドウで遷移
+  close();
+});
+
 
 
 
