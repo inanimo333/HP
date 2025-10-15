@@ -216,6 +216,21 @@ h3{font-size:20px;margin:0 0 6px}
 
 /* 9) CONTACT */
 .plain{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.plain a {
+  color: #b18eff; /* 壊れた月光みたいな紫 */
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: 0.3s ease;
+  text-shadow: 0 0 4px rgba(177, 142, 255, 0.3);
+}
+.plain a:hover {
+  color: #d8c0ff;
+  text-shadow:
+    0 0 6px #b18eff,
+    0 0 12px #c09aff,
+    0 0 20px rgba(255, 255, 255, 0.3);
+  filter: blur(0.3px) contrast(1.2);
+}
 .foot{padding:48px 20px;color:var(--fg-1);text-align:center;border-top:1px solid var(--line)}
 
 /* 10) MUSIC モーダル */
