@@ -122,14 +122,14 @@ const musicData = {
   // ※ preventDefault しないのが基本
 
   // ↑でうまくいかない環境向けの手動オープン
-  // e.preventDefault(); // ←基本OFF。必要なら下のフォールバック時だけ。
+  e.preventDefault(); // ←基本OFF。必要なら下のフォールバック時だけ。
 
-  const w = window.open(a.href, '_blank', 'noopener');
+ /* const w = window.open(a.href, '_blank', 'noopener');
   if (!w) {
     // ブロック検知された時だけ案内
     e.preventDefault();
     alert('新規タブがブロックされました。ポップアップを許可するか、Ctrl/⌘キーを押しながらクリックしてください。');
-  }
+  }*/
 });
 
 
