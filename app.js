@@ -146,13 +146,32 @@ modal.addEventListener('click', (e) => {
    `;
 
     // 🔽 追加：モーダル内リンクは確実に開く（PC対策）
-    content.addEventListener('click', (e) => {
+   /* content.addEventListener('click', (e) => {
       const a = e.target.closest('.links a, a.pill, .modal-body a');
       if (!a) return;
       e.preventDefault();      // 既存のルーター横取りを無効化
       e.stopPropagation();     // 背景のクリックハンドラに渡さない
       window.open(a.href, '_blank', 'noopener');
-    });
+    }); */
+
+     content.addEventListener('click', (e) => {
+  const a = e.target.closest('.links a');
+  if (!a) return;
+
+  // まず通常遷移（ブラウザに任せる）
+  // ※ preventDefault しないのが基本
+
+  // ↑でうまくいかない環境向けの手動オープン
+  // e.preventDefault(); // ←基本OFF。必要なら下のフォールバック時だけ。
+
+  const w = window.open(a.href, '_blank', 'noopener');
+  if (!w) {
+    // ブロック検知された時だけ案内
+    e.preventDefault();
+    alert('新規タブがブロックされました。ポップアップを許可するか、Ctrl/⌘キーを押しながらクリックしてください。');
+  }
+});
+
 
     modal.setAttribute('aria-hidden','false');
     document.documentElement.classList.add('modal-open');
