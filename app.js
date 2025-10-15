@@ -179,6 +179,18 @@ modal.addEventListener('click', (e) => {
   window.addEventListener('keydown', (e) => { if(e.key === 'Escape') close(); });
 })();
 
+// 内部ナビだけ SPA 遷移にする（外部/target=_blankは素通り）
+document.addEventListener('click', (e) => {
+  const a = e.target.closest('a');
+  if (!a) return;
+  const isInternal = a.matches('[data-route]');
+  if (!isInternal) return;        // ← ここで外部リンクは触らない
+  e.preventDefault();
+  history.pushState(null, '', a.getAttribute('href'));
+  setActive(a.getAttribute('href'));
+});
+
+
 
 
 
