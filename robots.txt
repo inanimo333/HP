@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://inanimo-officialwebsite.pages.dev/sitemap.xml
