@@ -219,7 +219,7 @@ h3{font-size:20px;margin:0 0 6px}
 .plain a {
   color: #b18eff; /* 壊れた月光みたいな紫 */
   text-decoration: none;
-  letter-spacing: 0.03em;
+  /*letter-spacing: 0.03em;*/
   transition: 0.3s ease;
   text-shadow: 0 0 4px rgba(177, 142, 255, 0.3);
 }
