@@ -82,12 +82,12 @@ const musicData = {
   },
  tendousetsu: {
     title: "天動説",
-    cover: "assets/tendousetsu.jpg",
+    cover: "assets/tendousetsu.JPG",
     desc:  "太陽が照らしてくれるのを待っている。まるで天動説のように。<br>2025.11.10 Release",
     links: [
-      {label:"About", url:"tendousetsu/"},
+      {label:"About(ComingSoon)", url:"/"},
       {label:"DL&Streaming", url:"https://linkco.re/DSR50Zg4"},
-      {label:"MusicVideo　ComingSoon", url:""},  
+      {label:"MusicVideo(ComingSoon)", url:""},  
     ]
   },
 };
