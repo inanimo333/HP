@@ -80,6 +80,16 @@ const musicData = {
       //{label:"MusicVideo", url:"https://youtu.be/-AcBYQc19eE?si=cIgl4UnQXiVQbQO1"},  
     ]
   },
+ tendousetsu: {
+    title: "天動説",
+    cover: "assets/tendousetsu.jpg",
+    desc:  "太陽が照らしてくれるのを待っている。まるで天動説のように。<br>2025.11.10 Release",
+    links: [
+      {label:"About", url:"tendousetsu/"},
+      {label:"DL&Streaming", url:"https://linkco.re/DSR50Zg4"},
+      {label:"MusicVideo　ComingSoon", url:""},  
+    ]
+  },
 };
 
 /* 3) MUSIC モーダル
