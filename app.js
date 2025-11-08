@@ -87,7 +87,7 @@ const musicData = {
     links: [
       {label:"About(ComingSoon)", url:"/"},
       {label:"DL&Streaming", url:"https://linkco.re/DSR50Zg4"},
-      {label:"MusicVideo(ComingSoon)", url:""},  
+      {label:"MusicVideo", url:"https://youtu.be/-AcBYQc19eE?si=07tCnCzvykSXbKln"},  
     ]
   },
 };
