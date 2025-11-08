@@ -76,7 +76,7 @@ const musicData = {
     desc:  "何も感じずにいられることが、大人になるということでしょうか。<br>2025.9.10 Release",
     links: [
       {label:"About", url:"NUMBNESS/"},
-      {label:"DL&Streaming", url:"https://linkco.re/eqRu0BZX"},
+      {label:"DL&Streaming", url:"https://lnk.to/numbness"},
       //{label:"MusicVideo", url:"https://youtu.be/-AcBYQc19eE?si=cIgl4UnQXiVQbQO1"},  
     ]
   },
