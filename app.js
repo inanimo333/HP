@@ -66,7 +66,7 @@ const musicData = {
     desc:  "僕らネアニオン、葦にしがみついている。<br>2025.10.17 Release",
     links: [
       {label:"About", url:"neanion/"},
-      {label:"DL&Streaming", url:"https://linkco.re/fMsg46gH"},
+      {label:"DL&Streaming", url:"https://lnk.to/neanion"},
       {label:"MusicVideo", url:"https://youtu.be/-AcBYQc19eE?si=cIgl4UnQXiVQbQO1"}, 
     ]
   },
