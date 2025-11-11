@@ -423,4 +423,6 @@ body::before{
 .hero--neanion{
    background-image: url('assets/neanion.JPG');
 }
-
+.hero--numbness{
+   background-image: url('assets/tendousetsu.jpg');
+}
