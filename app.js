@@ -85,8 +85,8 @@ const musicData = {
     cover: "assets/tendousetsu.JPG",
     desc:  "太陽が照らしてくれるのを待っている。まるで天動説のように。<br>2025.11.10 Release",
     links: [
-      {label:"About(ComingSoon)", url:"/"},
-      {label:"DL&Streaming", url:"https://linkco.re/DSR50Zg4"},
+      {label:"About", url:"tendousetsu/"},
+      {label:"DL&Streaming", url:"https://lnk.to/Tendousetsu"},
       {label:"MusicVideo", url:"https://youtu.be/3L26d93b6Rs"},  
     ]
   },
