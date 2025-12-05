@@ -90,6 +90,16 @@ const musicData = {
       {label:"MusicVideo", url:"https://youtu.be/3L26d93b6Rs"},  
     ]
   },
+　SekiryoSenka: {
+    title: "寂寥戦歌",
+    cover: "assets/Sekiryo Senka.PNG",
+    desc:  "寂寥感を背負って生きる。<br>2025.12.08 Release",
+    links: [
+      {label:"About", url:"Sekiryo Senka/"},
+      {label:"DL&Streaming", url:"https://lnk.to/"},
+      {label:"MusicVideo", url:""},  
+    ]
+  },
 };
 
 /* 3) MUSIC モーダル
