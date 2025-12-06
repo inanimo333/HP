@@ -97,7 +97,7 @@ const musicData = {
     links: [
       {label:"About", url:"Sekiryo Senka/"},
       {label:"DL&Streaming", url:"https://lnk.to/"},
-      {label:"MusicVideo", url:""},  
+      {label:"MusicVideo", url:"https://youtu.be/_0yFN1Pfp_c"},  
     ]
   },
 };
