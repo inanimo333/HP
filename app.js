@@ -96,7 +96,7 @@ const musicData = {
     desc:  "寂寥感を背負って生きる。<br>2025.12.08 Release",
     links: [
       {label:"About", url:"Sekiryo Senka/"},
-      {label:"DL&Streaming", url:"https://lnk.to/"},
+      {label:"DL&Streaming", url:"https://linkco.re/Xqb83UQN"},
       {label:"MusicVideo", url:"https://youtu.be/_0yFN1Pfp_c"},  
     ]
   },
