@@ -100,6 +100,16 @@ const musicData = {
       {label:"MusicVideo", url:"https://youtu.be/_0yFN1Pfp_c"},  
     ]
   },
+ kugutsuyoyo: {
+    title: "ｸｸﾞﾂ･ﾖｳﾖｳ",
+    cover: "assets/kugutsuyoyo.PNG",
+    desc:  "吊られ揺られる人生はつまらんけど、糸の切れた人生も悲しいヨ😢<br>2026.02.20 Release",
+    links: [
+      {label:"About", url:"kugutsuyoyo/"},
+      {label:"DL&Streaming", url:"https://linkco.re/1z4XRY1X"},
+      {label:"MusicVideo", url:"https://youtu.be/FYHzcmAbKZ0"},  
+    ]
+  },  
 };
 
 /* 3) MUSIC モーダル
